@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if sensors &>/dev/null; then
-    sensordata=$(sensors)
-    memorydata=$(free -h)
-    echo "$sensordata" | awk '/^Package id 0:/{print "CPU:         "$4}'
-    echo "$memorydata" | awk '/^Mem:/{print "Memory:      "$3 "/" $2}'
-    echo "$sensordata" | awk '/^fan1:/{print} /^fan2:/{print}'
-fi
