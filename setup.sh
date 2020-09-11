@@ -55,20 +55,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo -ne "########################################################                              70%\r"
 echo -ne "################################################################                      80%\r"
 
-#####################
-## Install VS Code ##
-#####################
-
-# Check if code is installed
-if ! type "code" &>/dev/null; then
-    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >microsoft.gpg
-    sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-
-    sudo apt-get install -y apt-transport-https
-    sudo apt-get update
-    sudo apt-get install -y code
-fi
 
 ###########################
 ## Create symbolic links ##
