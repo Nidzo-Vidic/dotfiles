@@ -8,7 +8,7 @@ My skript for automating the installation and configuration of a linux system af
 ## Installation
 
 ```shell
-sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/ndz-v/dotfiles/master/remote-setup.sh`"
+sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/ndz-v/dotfiles/wsl/remote-setup.sh`"
 ```
 
 ### Explanation
