@@ -55,7 +55,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo -ne "########################################################                              70%\r"
 echo -ne "################################################################                      80%\r"
 
-
 ###########################
 ## Create symbolic links ##
 ###########################
@@ -72,6 +71,9 @@ ln -sfn "$nanorc" "$nanorc_location"
 
 # neovim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+nvim_config_dir="$HOME/.config/nvim"
+[ -d "$nvim_config_dir" ] || mkdir -p "$nvim_config_dir"
 
 neovim_init="$HOME/dev/dotfiles/nvim/init.vim"
 coc_settings="$HOME/dev/dotfiles/nvim/coc-settings.json"
